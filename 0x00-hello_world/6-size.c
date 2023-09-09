@@ -24,8 +24,24 @@ int main(void)
 
     #if defined(__i386__) || defined(__i686__)
         printf("Architecture: 32-bit\n");
+        printf("Size of char: 1 bytes\n");
+        printf("Size of int: 4 bytes\n");
+        printf("Size of short: 2 bytes\n");
+        printf("Size of long: 4 bytes\n");
+        printf("Size of long long: 8 bytes\n");
+        printf("Size of float: 4 bytes\n");
+        printf("Size of double: 8 bytes\n");
+        printf("Size of long double: 12 bytes\n");
     #elif defined(__x86_64__) || defined(__amd64__)
         printf("Architecture: 64-bit\n");
+        printf("Size of char: 1 bytes\n");
+        printf("Size of int: 4 bytes\n");
+        printf("Size of short: 2 bytes\n");
+        printf("Size of long: 8 bytes\n");
+        printf("Size of long long: 8 bytes\n");
+        printf("Size of float: 4 bytes\n");
+        printf("Size of double: 8 bytes\n");
+        printf("Size of long double: 16 bytes\n");
     #else
         printf("Architecture: Unknown\n");
     #endif
