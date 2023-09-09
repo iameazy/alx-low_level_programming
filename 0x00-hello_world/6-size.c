@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point of the program
+ *
+ * Description:
+ * This program prints the size of various data types on the computer it
+ * is compiled and run on. It detects the architecture (32-bit or 64-bit)
+ * and provides the appropriate output.
+ *
+ * Return:
+ * 0 to indicate successful execution.
+ */
 int main(void)
 {
     printf("Size of char: %zu bytes\n", sizeof(char));
@@ -11,9 +22,9 @@ int main(void)
     printf("Size of double: %zu bytes\n", sizeof(double));
     printf("Size of long double: %zu bytes\n", sizeof(long double));
 
-    #if __SIZEOF_POINTER__ == 4
+    #if defined(__i386__) || defined(__i686__)
         printf("Architecture: 32-bit\n");
-    #elif __SIZEOF_POINTER__ == 8
+    #elif defined(__x86_64__) || defined(__amd64__)
         printf("Architecture: 64-bit\n");
     #else
         printf("Architecture: Unknown\n");
