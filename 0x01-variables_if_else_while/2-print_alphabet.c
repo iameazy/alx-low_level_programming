@@ -10,16 +10,16 @@
  */
 int main(void)
 {
-    char letter = 'a';
+	char letter = 'a';
 
-    /* Print the alphabet using a loop */
-    for (; letter <= 'z'; letter++)
-    {
-        putchar(letter);
-    }
+	/* Print the alphabet using a loop */
+	for (; letter <= 'z'; letter++)
+	{
+		putchar(letter);
+	}
 
-    /* Print a new line */
-    putchar('\n');
+	/* Print a new line */
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
