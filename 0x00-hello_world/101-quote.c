@@ -1,9 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 1 (Error)
+ */
 int main(void)
 {
-	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	ssize_t len = strlen(message);
-	return (write(STDERR_FILENO, message, len) != len);
+    ssize_t len = 0;
+    char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+    len = sizeof(*str);
+    if (write(STDERR_FILENO, str, len) != len)
+    {
+        return (1);
+    }
+    return (0);
 }
