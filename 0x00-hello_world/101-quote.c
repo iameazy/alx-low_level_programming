@@ -5,7 +5,7 @@
  * main - Entry point of the program
  *
  * Description: This program prints a specific message to the standard error
- *              and returns 1.
+ * and returns 1.
  *
  * Return: Always 1 (Error code)
  */
