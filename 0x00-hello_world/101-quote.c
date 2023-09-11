@@ -10,7 +10,7 @@
 int main(void)
 {
 	ssize_t len = 0;
-	char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char *str = "and that piece of art is useful\n" - Dora Korpar, 2015-10-19\n";
 
 	len = sizeof(*str);
 	if (write(STDERR_FILENO, str, len) != len)
