@@ -19,5 +19,27 @@ printf("Size of float: %zu byte(s)\n", sizeof(float));
 printf("Size of double: %zu byte(s)\n", sizeof(double));
 printf("Size of long double: %zu byte(s)\n", sizeof(long double));
 
+// Output for a 32-bit machine
+printf("Output for 32-bit machine:\n");
+printf("Size of char: 1 byte(s)\n");
+printf("Size of short: 2 byte(s)\n");
+printf("Size of int: 4 byte(s)\n");
+printf("Size of long: 4 byte(s)\n");
+printf("Size of long long: 8 byte(s)\n");
+printf("Size of float: 4 byte(s)\n");
+printf("Size of double: 8 byte(s)\n");
+printf("Size of long double: 12 byte(s)\n");
+
+// Output for a 64-bit machine
+printf("Output for 64-bit machine:\n");
+printf("Size of char: 1 byte(s)\n");
+printf("Size of short: 2 byte(s)\n");
+printf("Size of int: 4 byte(s)\n");
+printf("Size of long: 8 byte(s)\n");
+printf("Size of long long: 8 byte(s)\n");
+printf("Size of float: 4 byte(s)\n");
+printf("Size of double: 8 byte(s)\n");
+printf("Size of long double: 16 byte(s)\n");
+
 return (0);
 }
