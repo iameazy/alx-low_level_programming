@@ -1,21 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
- * main - Entry point of the program
+ * main - Entry point
  *
  * Return: Always 1 (Error)
  */
 int main(void)
 {
-	ssize_t len = 0;
-	char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	len = sizeof(*str);
-	if (write(STDERR_FILENO, str, len) != len)
-	{
-		return (1);
-	}
-	return (1);
+    write(STDERR_FILENO, str, 59);
+    return (1);
 }
