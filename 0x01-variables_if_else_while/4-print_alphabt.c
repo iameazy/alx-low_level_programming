@@ -3,25 +3,24 @@
 /**
  * main - Entry point of the program
  *
- * Description: This program prints the lowercase alphabet,
- * excluding the letters 'e' and 'q', followed by a newline.
+ * Description: This program prints the lowercase alphabet
+ * excluding the letters 'q' and 'e' using putchar.
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    char letter = 'a';
+	char letter;
 
-    while (letter <= 'z')
-    {
-        if (letter != 'e' && letter != 'q')
-        {
-            putchar(letter);
-        }
-        letter++;
-    }
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		if (letter != 'e' && letter != 'q')
+		{
+			putchar(letter);
+		}
+	}
 
-    putchar('\n');
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
