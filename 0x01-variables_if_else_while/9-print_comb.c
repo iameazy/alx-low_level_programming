@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int main() {
+    int i;
     // Loop through single-digit numbers from 0 to 9
-    for (int i = 0; i < 10; i++) {
+    for (i = 0; i < 10; i++) {
         // Print the current number as a character using putchar
         putchar('0' + i);
 
