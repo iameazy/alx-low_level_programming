@@ -1,14 +1,10 @@
-#!/usr/bin/python3
-"""
-Print Single-Digit Numbers in Base 10
-"""
+#include <stdio.h>
 
-def main():
-    """
-    Main function to print single-digit numbers in base 10.
-    """
-    for i in range(10):
-        print(i)
+int main() {
+    // Print single-digit numbers in base 10
+    for (int i = 0; i < 10; i++) {
+        printf("%d\n", i);
+    }
 
-if __name__ == "__main__":
-    main()
+    return 0;
+}
