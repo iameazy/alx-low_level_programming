@@ -10,17 +10,13 @@
  */
 int main(void)
 {
-    char c;
+	char c;
 
-    /* Loop through the lowercase alphabet in reverse order */
-    for (c = 'z'; c >= 'a'; c--)
-    {
-        /* Print the current character using putchar */
-        putchar(c);
-    }
+	for (c = 'z'; c >= 'a'; c--)
+	{
+		putchar(c);
+	}
+	putchar('\n');
 
-    /* Print a newline character to end the line */
-    putchar('\n');
-
-    return (0);
+	return (0);
 }
