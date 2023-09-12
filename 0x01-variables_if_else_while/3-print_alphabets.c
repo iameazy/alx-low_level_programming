@@ -10,22 +10,22 @@
  */
 int main(void)
 {
-    char lowercase, uppercase;
+	char lowercase, uppercase;
 
-    /* Print lowercase alphabet */
-    for (lowercase = 'a'; lowercase <= 'z'; lowercase++)
-    {
-        putchar(lowercase);
-    }
+	/* Print lowercase alphabet */
+	for (lowercase = 'a'; lowercase <= 'z'; lowercase++)
+	{
+		putchar(lowercase);
+	}
 
-    /* Print uppercase alphabet */
-    for (uppercase = 'A'; uppercase <= 'Z'; uppercase++)
-    {
-        putchar(uppercase);
-    }
+	/* Print uppercase alphabet */
+	for (uppercase = 'A'; uppercase <= 'Z'; uppercase++)
+	{
+		putchar(uppercase);
+	}
 
-    /* Print a new line */
-    putchar('\n');
+	/* Print a new line */
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
