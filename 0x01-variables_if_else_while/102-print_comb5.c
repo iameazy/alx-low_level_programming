@@ -4,8 +4,8 @@
  * main - Entry point of the program
  *
  * Description: Prints all possible combinations of two two-digit numbers
- * ranging from 00 to 99. Combinations are separated by commas and spaces.
- * Numbers are printed with two digits.
+ * ranging from 00 to 99, excluding duplicates. Combinations are separated
+ * by commas and spaces. Numbers are printed with two digits.
  *
  * Return: Always 0 (Success)
  */
@@ -15,7 +15,7 @@ int main(void)
 
     for (i = 0; i <= 99; i++)
     {
-        for (j = i; j <= 99; j++)
+        for (j = i + 1; j <= 99; j++)
         {
             /* Print the first two-digit number */
             putchar((i / 10) + '0');
