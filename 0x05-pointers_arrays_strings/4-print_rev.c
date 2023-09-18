@@ -8,7 +8,7 @@
  */
 void _print_reverse(char *str)
 {
-    int length; // Declare 'int i' here in ISO C90
+    int length; /* Declare 'int i' here in ISO C90 */
     if (str == NULL)
     {
         return;  /* Handle NULL input */
@@ -16,7 +16,9 @@ void _print_reverse(char *str)
 
     length = strlen(str);
 
-    for (int i = length - 1; i >= 0; i--)
+    int i;
+    for (i = length - 1; i >= 0; i--)
+
     {
         putchar(str[i]);
     }
