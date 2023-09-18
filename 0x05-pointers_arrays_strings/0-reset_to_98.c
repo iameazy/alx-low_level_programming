@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <limits.h> // for INT_MAX and INT_MIN
+#include <limits.h> /* for INT_MAX and INT_MIN */
 
 /**
  * reset_to_98 - Updates the value an integer pointer points to 98
@@ -43,3 +43,4 @@ int main(void)
 
     return (0);
 }
+
