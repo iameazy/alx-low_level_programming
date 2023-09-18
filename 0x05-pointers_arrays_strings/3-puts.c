@@ -7,9 +7,9 @@
  */
 void _puts(char *str)
 {
-    if (str != NULL)
-    {
-        printf("%s\n", str);
-    }
+	if (str != NULL)
+	{
+		printf("%s\n", str);
+	}
 }
 
