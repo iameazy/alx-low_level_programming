@@ -20,19 +20,3 @@ int _strlen(char *s)
 
     return length;
 }
-
-/**
- * main - Entry point of the program.
- *
- * Return: Always 0 (Success).
- */
-int main(void)
-{
-    char myString[] = "Hello, World!";
-    int length = _strlen(myString);
-
-    printf("The length of the string is: %d\n", length);
-
-    return (0);
-}
-
