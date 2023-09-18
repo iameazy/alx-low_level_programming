@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <limits.h>
+#include "reset_to_98.h" // Include the header file
+
+int main(void)
+{
+    int num1 = 402;
+    int num2 = -4096;
+    int max = INT_MAX;
+    int min = INT_MIN;
+
+    printf("Before: n = %d\n", num1);
+    reset_to_98(&num1);
+    printf("Correct output: n = %d\n", num1);
+
+    printf("Before: n = %d\n", num2);
+    reset_to_98(&num2);
+    printf("Correct output: n = %d\n", num2);
+
+    printf("Correct output: n = %d / ", max);
+    reset_to_98(&max);
+    printf("n = %d\n", max);
+
+    printf("Correct output: n = %d / ", min);
+    reset_to_98(&min);
+    printf("n = %d\n", min);
+
+    return (0);
+}
