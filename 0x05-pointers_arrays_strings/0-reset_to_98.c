@@ -22,6 +22,8 @@ int main(void)
 {
     int num1 = 402;
     int num2 = -4096;
+    int max = INT_MAX;
+    int min = INT_MIN;
 
     printf("Before: n = %d\n", num1);
     reset_to_98(&num1);
@@ -31,13 +33,13 @@ int main(void)
     reset_to_98(&num2);
     printf("Correct output: n = %d\n", num2);
 
-    printf("Correct output: n = %d / ", INT_MAX);
-    reset_to_98(&INT_MAX);
-    printf("n = %d\n", INT_MAX);
+    printf("Correct output: n = %d / ", max);
+    reset_to_98(&max);
+    printf("n = %d\n", max);
 
-    printf("Correct output: n = %d / ", INT_MIN);
-    reset_to_98(&INT_MIN);
-    printf("n = %d\n", INT_MIN);
+    printf("Correct output: n = %d / ", min);
+    reset_to_98(&min);
+    printf("n = %d\n", min);
 
     return (0);
 }
