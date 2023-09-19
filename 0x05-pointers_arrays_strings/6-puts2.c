@@ -21,4 +21,3 @@ void puts2(char *str)
 
     putchar('\n'); /* Add a newline after printing all characters */
 }
-
