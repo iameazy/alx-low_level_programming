@@ -16,7 +16,7 @@ void puts_half(char *str)
     /* Calculate the starting index for the second half */
     int start_index = (length - 1) / 2 + 1;
     
-    int i; // Declare loop variable outside of the loop
+    int i; /* Declare loop variable outside of the loop */
     
     /* Print the second half of the string */
     for (i = start_index; i < length; i++)
