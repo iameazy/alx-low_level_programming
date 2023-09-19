@@ -13,8 +13,8 @@ void puts2(char *str)
         putchar(str[i]);
         i++;
         if (str[i] != '\0') /* Check if the next character exists */
-            i++; // Increment i to skip the next character
+            i++; /* Increment i to skip the next character */
     }
 
-    putchar('\n'); // Print a new line after all characters are printed
+    putchar('\n'); /* Print a new line after all characters are printed */
 }
