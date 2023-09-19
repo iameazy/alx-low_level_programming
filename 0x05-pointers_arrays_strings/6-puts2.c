@@ -6,18 +6,18 @@
  */
 void puts2(char *str)
 {
-    int i = 0; /* Declare the variable at the beginning of the block */
+	int i = 0; /* Declare the variable at the beginning of the block */
 
-    if (str == NULL)
-    {
-        return; /* Handle null pointer gracefully */
-    }
+	if (str == NULL)
+	{
+		return; /* Handle null pointer gracefully */
+	}
 
-    while (str[i] != '\0')
-    {
-        printf("%c", str[i]);
-        i += 2;
-    }
+	while (str[i] != '\0')
+	{
+		putchar(str[i]);
+		i += 2;
+	}
 
-    printf("\n"); /* Add a newline after printing all characters */
+	putchar('\n'); /* Add a newline after printing all characters */
 }
