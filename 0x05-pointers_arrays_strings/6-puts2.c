@@ -19,7 +19,7 @@ void puts2(char *str)
         i += 2;
     }
 
-    printf("\n"); // Add a newline after printing all characters
+    printf("\n"); /* Add a newline after printing all characters */
 }
 
 int main(void)
@@ -28,9 +28,9 @@ int main(void)
     char str2[] = "Lorem ipsum...";
     char str3[] = "";
 
-    puts2(str1); // Should print "Hlbtn!\n"
-    puts2(str2); // Should print "Lmipu...\n"
-    puts2(str3); // Should print "\n"
+    puts2(str1); /* Should print "Hlbtn!\n" */
+    puts2(str2); /* Should print "Lmipu...\n" */
+    puts2(str3); /* Should print "\n" */
 
     return (0);
 }
