@@ -6,7 +6,7 @@
  */
 void puts2(char *str)
 {
-    int i = 0; // Declare the variable at the beginning of the block
+    int i = 0; /* Declare the variable at the beginning of the block */
 
     if (str == NULL)
     {
