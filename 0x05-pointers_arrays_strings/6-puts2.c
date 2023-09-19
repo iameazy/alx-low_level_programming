@@ -6,18 +6,13 @@
  */
 void puts2(char *str)
 {
-    int i = 0; /* Declare the variable at the beginning of the block */
-
-    if (str == NULL)
-    {
-        return; /* Handle null pointer gracefully */
-    }
+    int i = 0;
 
     while (str[i] != '\0')
     {
         putchar(str[i]);
-        i += 2;
+        i += 2; /* Increment i by 2 to skip every other character */
     }
 
-    putchar('\n'); /* Add a newline after printing all characters */
+    putchar('\n'); /* Print a new line after all characters are printed */
 }
