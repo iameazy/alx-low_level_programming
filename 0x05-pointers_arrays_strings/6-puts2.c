@@ -20,5 +20,4 @@ void puts2(char *str)
     }
 
     printf("\n"); /* Add a newline after printing all characters */
-
 }
