@@ -12,8 +12,8 @@ int _atoi(char *s)
 	int result = 0;
 	int sign = 1; /* Default sign is positive */
 
-	/* Skip leading white spaces */
-	while (*s == ' ')
+	/* Skip leading non-numeric characters */
+	while (*s && (*s < '0' || *s > '9') && (*s != '-' && *s != '+'))
 		s++;
 
 	/* Check for sign (+ or -) */
