@@ -11,7 +11,7 @@ void puts2(char *str)
         return; /* Handle null pointer gracefully */
     }
 
-    int i = 0; // Move the variable declaration to the beginning of the block
+    int i = 0; /* Move the variable declaration to the beginning of the block */
 
     while (str[i] != '\0')
     {
