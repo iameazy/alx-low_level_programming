@@ -6,12 +6,12 @@
  */
 void puts2(char *str)
 {
+    int i = 0; // Declare the variable at the beginning of the block
+
     if (str == NULL)
     {
         return; /* Handle null pointer gracefully */
     }
-
-    int i = 0; /* Move the variable declaration to the beginning of the block */
 
     while (str[i] != '\0')
     {
