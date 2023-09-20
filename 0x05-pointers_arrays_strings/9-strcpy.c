@@ -8,7 +8,7 @@ int main(void)
     char source[] = "Hello, World!";
     char destination[20]; /* Make sure destination has enough space */
 
-    char *result = _strcpy(destination, source);
+    _strcpy(destination, source); // Call _strcpy without storing the result
 
     printf("Source: %s\n", source);
     printf("Destination: %s\n", destination);
