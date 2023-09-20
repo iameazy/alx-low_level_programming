@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <limits.h>
+#include "main.h"
 
 /**
- * _atoi - Convert a string to an integer.
+ * _atoi - Converts a string to an integer.
  * @s: The input string.
  *
  * Return: The integer value of the string.
@@ -10,37 +9,35 @@
 int _atoi(char *s)
 {
     int result = 0;
-    int sign = 1; /* Default sign is positive */
+    int sign = 1;
+    int digitEncountered = 0;
 
-    /* Skip leading non-numeric characters */
-    while (*s && (*s < '0' || *s > '9') && (*s != '-' && *s != '+'))
-        s++;
+    /* Iterate through the characters in the string */
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        /* Handle spaces */
+        if (s[i] == ' ')
+            continue;
 
-    /* Check for sign (+ or -) */
-    if (*s == '-')
-    {
-        sign = -1;
-        s++;
-    }
-    else if (*s == '+')
-    {
-        s++;
-    }
-
-    /* Convert the string to an integer */
-    while (*s >= '0' && *s <= '9')
-    {
-        /* Check for integer overflow */
-        if (result > (INT_MAX - (*s - '0')) / 10)
+        /* Handle signs */
+        if (s[i] == '-')
+            sign = -1;
+        else if (s[i] == '+')
+            sign = 1;
+        
+        /* Handle digits */
+        if (s[i] >= '0' && s[i] <= '9')
         {
-            if (sign == 1)
-                return (INT_MAX);
-            else
-                return (INT_MIN);
+            result = result * 10 + (s[i] - '0');
+            digitEncountered = 1;
         }
-        result = result * 10 + (*s - '0');
-        s++;
+        else if (digitEncountered)
+        {
+            /* If a non-digit is encountered after digits, break */
+            break;
+        }
     }
 
-    return (result * sign);
+    return result * sign;
 }
+
