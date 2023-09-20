@@ -2,35 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
-
 /**
- * generate_random_password - Generates a random valid password.
+ * generatePassword - Generate a random password of a specified length.
+ * @password: The buffer to store the generated password.
+ * @length: The length of the password to generate.
  *
- * This function generates a random valid password containing lowercase
- * letters and digits.
- *
- * Return: A dynamically allocated string containing the password.
+ * This function generates a random password consisting of letters (both
+ * uppercase and lowercase) and digits.
  */
-char *generate_random_password() {
-    const char charset[] = "abcdefghijklmnopqrstuvwxyz0123456789";
-    const int charset_length = sizeof(charset) - 1;
+void generatePassword(char *password, int length) {
+    /* Define the character set from which the password will be generated. */
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const int charsetLength = sizeof(charset) - 1;
 
-    srand(time(NULL));
+    /* Seed the random number generator with the current time. */
+    srand((unsigned int)time(NULL));
 
-    char *password = (char *)malloc((PASSWORD_LENGTH + 1) * sizeof(char)); // +1 for the null terminator
-
-    if (password == NULL) {
-        perror("Memory allocation failed");
-        exit(EXIT_FAILURE);
-    }
-
-    for (int i = 0; i < PASSWORD_LENGTH; i++) {
-        int index = rand() % charset_length;
+    /* Generate the random password character by character. */
+    for (int i = 0; i < length; ++i) {
+        int index = rand() % charsetLength;
         password[i] = charset[index];
     }
 
-    password[PASSWORD_LENGTH] = '\0';
-
-    return password;
+    /* Null-terminate the password string. */
+    password[length] = '\0';
 }
