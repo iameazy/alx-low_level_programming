@@ -11,9 +11,10 @@ int _atoi(char *s)
     int result = 0;
     int sign = 1;
     int digitEncountered = 0;
+    int i; // Declare the loop counter variable here
 
     /* Iterate through the characters in the string */
-    for (int i = 0; s[i] != '\0'; i++)
+    for (i = 0; s[i] != '\0'; i++)
     {
         /* Handle spaces */
         if (s[i] == ' ')
@@ -40,4 +41,3 @@ int _atoi(char *s)
 
     return result * sign;
 }
-
