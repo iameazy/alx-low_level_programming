@@ -10,7 +10,7 @@
  */
 void print_array(int *a, int n)
 {
-    int i; // Declare the loop variable outside the for loop
+    int i; /* Declare the loop variable outside the for loop */
 
     /* Check if n is non-positive and print a newline */
     if (n <= 0)
