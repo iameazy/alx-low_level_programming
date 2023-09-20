@@ -1,27 +1,29 @@
 #include <stdio.h>
 
 /**
- * print_array - Prints n elements of an array of integers followed by a new line.
- * @a: The array of integers.
+ * print_array - Prints n elements of an array of integers.
+ * @a: The array to be printed.
  * @n: The number of elements to print.
  *
- * Description: This function prints the first n elements of the array 'a'
- * separated by a comma and space, followed by a new line.
+ * Description: Numbers are separated by a comma followed by a space,
+ * and a newline is printed at the end.
  */
 void print_array(int *a, int n)
 {
-    int i; /* Declare loop variable outside of the loop */
+	/* Check if n is non-positive and print a newline */
+	if (n <= 0)
+	{
+		printf("\n");
+		return;
+	}
 
-    if (n <= 0)
-    {
-        printf("\n"); /* Print a newline for an empty array or invalid input */
-        return;
-    }
+	printf("%d", a[0]); /* Print the first element without a comma and space */
 
-    for (i = 0; i < n - 1; i++)
-    {
-        printf("%d, ", a[i]);
-    }
+	/* Loop to print subsequent elements with a comma and space */
+	for (int i = 1; i < n; i++)
+	{
+		printf(", %d", a[i]);
+	}
 
-    printf("%d\n", a[n - 1]); /* Print the last element followed by a newline */
+	printf("\n"); /* Print a newline at the end */
 }
