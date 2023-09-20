@@ -1,21 +1,5 @@
 #include <stdio.h>
 
-/* Function prototype */
-char *_strcpy(char *dest, const char *src);
-
-int main(void)
-{
-    char source[] = "Hello, World!";
-    char destination[20]; /* Make sure destination has enough space */
-
-    _strcpy(destination, source); /* Call _strcpy without storing the result */
-
-    printf("Source: %s\n", source);
-    printf("Destination: %s\n", destination);
-
-    return 0;
-}
-
 /**
  * _strcpy - Copies a string from src to dest.
  * @dest: Pointer to the destination buffer.
