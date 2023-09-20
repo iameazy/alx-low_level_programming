@@ -10,20 +10,23 @@
  */
 void print_array(int *a, int n)
 {
-	/* Check if n is non-positive and print a newline */
-	if (n <= 0)
-	{
-		printf("\n");
-		return;
-	}
+    int i; // Declare the loop variable outside the for loop
 
-	printf("%d", a[0]); /* Print the first element without a comma and space */
+    /* Check if n is non-positive and print a newline */
+    if (n <= 0)
+    {
+        printf("\n");
+        return;
+    }
 
-	/* Loop to print subsequent elements with a comma and space */
-	for (int i = 1; i < n; i++)
-	{
-		printf(", %d", a[i]);
-	}
+    printf("%d", a[0]); /* Print the first element without a comma and space */
 
-	printf("\n"); /* Print a newline at the end */
+    /* Loop to print subsequent elements with a comma and space */
+    for (i = 1; i < n; i++)
+    {
+        printf(", %d", a[i]);
+    }
+
+    printf("\n"); /* Print a newline at the end */
 }
+
